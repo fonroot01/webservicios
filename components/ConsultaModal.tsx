@@ -39,7 +39,7 @@ function ConsultaModal({ isOpen, onClose }: ConsultaModalProps) {
     <div style={styles.overlay}>
       <div style={styles.modal}>
         <button style={styles.closeBtn} onClick={onClose}>&times;</button>
-        <h2>Solicitar Consulta</h2>
+        <h2>Agendar Servicio</h2>
         {successMsg && (
           <div style={{ color: '#2ecc40', fontWeight: 600, marginBottom: 12 }}>{successMsg}</div>
         )}
