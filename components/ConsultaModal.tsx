@@ -70,21 +70,22 @@ function ConsultaModal({ isOpen, onClose }: ConsultaModalProps) {
 const styles: { [key: string]: any } = {
   overlay: {
     position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100vw',
-    height: '100vh',
+    inset: 0, // Cubre toda la pantalla, mejor que top/left/width/height
     background: 'rgba(0,0,0,0.4)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 1000,
+    padding: 16, // Añade padding para evitar que el modal toque los bordes en móviles
+    boxSizing: 'border-box',
+    overflow: 'auto', // Permite scroll si el modal es muy grande
   },
   modal: {
     background: '#fff',
     borderRadius: 16,
-    padding: 32,
-    minWidth: 320,
+    padding: 24, // Reduce padding para móviles
+    minWidth: 0,
+    width: '100%',
     maxWidth: 400,
     boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
     position: 'relative',
@@ -93,6 +94,7 @@ const styles: { [key: string]: any } = {
     alignItems: 'center',
     justifyContent: 'center',
     margin: 0,
+    boxSizing: 'border-box',
   },
   closeBtn: {
     position: 'absolute',
