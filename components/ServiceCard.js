@@ -122,7 +122,7 @@ const ServiceCard = () => {
           className={styles.contactButton}
           onClick={() => setModalOpen(true)}
         >
-          <span className={styles.contactButtonText}>Solicitar Consulta</span>
+          <span className={styles.contactButtonText}>Agendar Servicio</span>
         </button>
         <ConsultaModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         <div style={{
