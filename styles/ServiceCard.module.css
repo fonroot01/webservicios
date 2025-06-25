@@ -1,0 +1,330 @@
+/* styles/ServiceCard.module.css */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.cardWrapper {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.cardWrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile Section */
+.profileSection {
+  margin-bottom: 32px;
+}
+
+.profilePhoto {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profilePhoto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.profileInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profilePhoto:hover .profileImage {
+  transform: scale(1.1);
+}
+
+.profileName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #263245;
+  margin-bottom: 10px; /* Espacio uniforme con subtítulo */
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.profileSubtitle {
+  font-size: 1.2rem;
+  color: #334157;
+  margin-bottom: 18px; /* Espacio uniforme con descripción */
+  margin-top: 0;
+  font-weight: 500;
+  animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.profileDescription {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  margin-bottom: 28px; /* Espacio uniforme con siguiente sección */
+  margin-top: 0;
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+/* Services Section */
+.servicesContainer {
+  margin-bottom: 32px;
+}
+
+.servicesTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #334157;
+  margin-bottom: 24px;
+  margin-top: 0;
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.6s ease 0.5s both;
+}
+
+.serviceCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover::before,
+.serviceCard.selected::before {
+  transform: scaleX(1);
+}
+
+.serviceCard.selected {
+  background: rgba(var(--accent-color-rgb), 0.05);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.serviceIcon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.serviceTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  line-height: 1.3;
+}
+
+/* Description Panel */
+.descriptionPanel {
+  background: #f7fafc;
+  border-radius: 12px;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.descriptionPanel.active {
+  max-height: 200px;
+  padding: 20px;
+  opacity: 1;
+}
+
+.descriptionContent {
+  text-align: left;
+}
+
+.descriptionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.descriptionIcon {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.descriptionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.descriptionText {
+  color: #4a5568;
+  line-height: 2;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Contact Button */
+.contactButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease 0.6s both;
+}
+
+.contactButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.contactButton:active {
+  transform: translateY(0);
+}
+
+.contactButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.contactButton:hover::before {
+  left: 100%;
+}
+
+.contactButtonText {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .cardWrapper {
+    padding: 24px;
+    margin: 10px;
+  }
+  
+  .profileName {
+    font-size: 1.6rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .serviceCard {
+    padding: 20px 16px;
+  }
+  
+  .descriptionPanel.active {
+    max-height: 250px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service-specific accent colors */
+.capacitacion {
+  --accent-color: #4299e1;
+  --accent-color-rgb: 66, 153, 225;
+}
+
+.reparacion {
+  --accent-color: #48bb78;
+  --accent-color-rgb: 72, 187, 120;
+}
+
+.mantenimiento {
+  --accent-color: #ed8936;
+  --accent-color-rgb: 237, 137, 54;
+}
+
+.consultoria {
+  --accent-color: #9f7aea;
+  --accent-color-rgb: 159, 122, 234;
+}

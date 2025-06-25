@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "id": "capacitacion",
+      "title": "Capacitación",
+      "icon": "📚",
+      "description": "Capacitación y buena práctica en informática",
+      "color": "#e3e6ea"
+    },
+    {
+      "id": "reparacion",
+      "title": "Reparación de Equipos",
+      "icon": "🔧",
+      "description": "Mantenimiento y reparación de hardware",
+      "color": "#dde6f1"
+    },
+    {
+      "id": "mantenimiento",
+      "title": "Mantenimiento Preventivo",
+      "icon": "⚙️",
+      "description": "Cuidado y mantenimiento de sistemas informáticos",
+      "color": "#f3f4f6"
+    },
+    {
+      "id": "consultoria",
+      "title": "Consultoría de Sistemas",
+      "icon": "💻",
+      "description": "Asesoría y búsqueda de soluciones informáticas",
+      "color": "#ece7f6"
+    }
+  ]
+}

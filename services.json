@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Servicio 1",
+    "description": "Descripción del servicio 1",
+    "icon": "/perfil.png"
+  },
+  {
+    "id": 2,
+    "title": "Servicio 2",
+    "description": "Descripción del servicio 2",
+    "icon": "/perfil.png"
+  }
+]
