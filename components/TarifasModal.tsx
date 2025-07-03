@@ -103,7 +103,7 @@ const TarifasModal: React.FC<TarifasModalProps> = ({ isOpen, onClose }) => {
     <div style={modalStyle}>
       <div style={contentStyle}>
         <button style={closeBtnStyle} onClick={onClose} aria-label="Cerrar modal">&times;</button>
-        <h2 style={{marginBottom: 18, fontSize: 22, color: '#4a5568'}}>Tarifas Sugeridas para Servicios Remotos</h2>
+        <h2 style={{marginBottom: 18, fontSize: 22, color: '#4a5568'}}>Tarifas de Servicios</h2>
         <div style={{overflowX: 'auto', width: '100%'}}>
           <table style={{width: '100%', borderCollapse: 'collapse', fontSize: 15}}>
             <thead>
