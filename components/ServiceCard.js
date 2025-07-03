@@ -122,7 +122,7 @@ const ServiceCard = () => {
           </div>
           
           <p className={styles.profileDescription}>
-            Brindo servicios de Servicios de soporte técnico remoto, acompañamiento digital para usuarios no técnicos, mantenimiento automatizado y consultoría en sistemas y seguridad. Ayudo a que cualquier persona utilice la tecnología de forma confiable y segura.
+            Brindo servicios de soporte técnico remoto, acompañamiento digital para usuarios no técnicos, mantenimiento automatizado y consultoría en sistemas y seguridad. Ayudo a que cualquier persona utilice la tecnología de forma confiable y segura.
           </p>
         </div>
 
