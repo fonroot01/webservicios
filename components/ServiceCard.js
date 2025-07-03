@@ -49,6 +49,50 @@ const ServiceCard = () => {
   return (
     <div className={styles.container}>
       <div className={styles.cardWrapper}>
+        {/* Barra superior mejorada */}
+        <div className={styles.topBar}>
+          <div className={styles.leftSection}>
+            <div className={styles.locationChip}>
+              <svg 
+                className={styles.locationIcon} 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Medellín, Antioquia</span>
+            </div>
+            
+            <div className={styles.remoteChip}>
+              <svg 
+                className={styles.remoteIcon} 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2"
+              >
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <span>Servicios Remotos</span>
+            </div>
+          </div>
+          
+          <div className={styles.rightSection}>
+            <a
+              href="https://alfonsom.vercel.app/"
+              className={styles.portfolioButton}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver portafolio"
+            >
+              <span>Ver Portafolio</span>
+              <span className={styles.arrowIcon}>→</span>
+            </a>
+          </div>
+        </div>
         
         {/* Profile Section */}
         <div className={styles.profileSection}>
@@ -65,7 +109,7 @@ const ServiceCard = () => {
           <h1 className={styles.profileName}>Alfonso Mosquera</h1>
           <p className={styles.profileSubtitle}>Ingeniero de Sistemas</p>
           <p className={styles.profileDescription}>
-            Ofrezco servicios de reparación de equipos, mantenimiento preventivo, consultoría en sistemas y capacitación tecnológica, aplicando principios básicos de seguridad para garantizar un entorno digital seguro y eficiente.
+            Ofrezco servicios de reparación de equipos, mantenimiento preventivo, consultoría en sistemas y capacitación tecnológica remota, aplicando principios básicos de seguridad para garantizar un entorno digital seguro y eficiente.
           </p>
         </div>
 
@@ -124,7 +168,9 @@ const ServiceCard = () => {
         >
           <span className={styles.contactButtonText}>Agendar Servicio</span>
         </button>
+        
         <ConsultaModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+        
         <div style={{
           textAlign: 'center',
           marginTop: 24,
