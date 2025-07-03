@@ -122,7 +122,7 @@ const ServiceCard = () => {
           </div>
           
           <p className={styles.profileDescription}>
-            Ofrezco servicios de reparación de equipos, mantenimiento preventivo, consultoría en sistemas y capacitación tecnológica remota, aplicando principios básicos de seguridad para garantizar un entorno digital seguro y eficiente.
+            Brindo servicios de Servicios de soporte técnico remoto, acompañamiento digital para usuarios no técnicos, mantenimiento automatizado y consultoría en sistemas y seguridad. Ayudo a que cualquier persona utilice la tecnología de forma confiable y segura.
           </p>
         </div>
 
