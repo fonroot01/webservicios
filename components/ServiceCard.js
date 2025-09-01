@@ -4,12 +4,13 @@ import styles from '../styles/ServiceCard.module.css';
 import ConsultaModal from './ConsultaModal';
 import ServicioInfoModal from './ServicioInfoModal';
 import TarifasModal from './TarifasModal';
+import { FaChalkboardTeacher, FaTools, FaCog, FaShieldAlt } from 'react-icons/fa';
 
 const services = [
   {
     id: 'capacitacion',
     title: 'Acompañamiento Digital para Usuarios No Técnicos',
-    icon: '🧑‍🏫',
+    icon: <FaChalkboardTeacher size={24} style={{ color: '#4299e1' }} />,
     description: 'Guía práctica en el uso de tecnología básica y seguridad en línea.',
     items: [
       'Uso básico de correo electrónico (Gmail, Outlook).',
@@ -23,7 +24,7 @@ const services = [
   {
     id: 'reparacion',
     title: 'Soporte Técnico de Equipos a Distancia',
-    icon: '🛠️',
+    icon: <FaTools size={24} style={{ color: '#48bb78' }} />,
     description: 'Solución remota de problemas técnicos comunes.',
     items: [
       'Instalación de software, eliminación de virus y configuración vía AnyDesk.',
@@ -36,7 +37,7 @@ const services = [
   {
     id: 'mantenimiento',
     title: 'Mantenimiento Preventivo Automatizado',
-    icon: '⚙️',
+    icon: <FaCog size={24} style={{ color: '#ed8936' }} />,
     description: 'Limpieza y optimización automatizada del sistema.',
     items: [
       'Ejecución de scripts para limpieza y mejora de rendimiento.',
@@ -49,7 +50,7 @@ const services = [
   {
     id: 'consultoria',
     title: 'Consultoría en Sistemas y Seguridad Digital',
-    icon: '🧠',
+    icon: <FaShieldAlt size={24} style={{ color: '#9f7aea' }} />,
     description: 'Asesoría en la implementación de buenas prácticas digitales.',
     items: [
       'Seguridad digital: contraseñas seguras, 2FA, prevención de fraudes.',
