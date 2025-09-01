@@ -9,19 +9,19 @@ const tarifas = [
   {
     servicio: 'Acompañamiento Digital',
     modalidad: 'Sesión individual (1h)',
-    tarifa: '$35.000',
+    tarifa: '$40.000',
     observaciones: 'Ideal para usuarios que necesitan ayuda puntual',
   },
   {
     servicio: 'Soporte Técnico de Equipos',
     modalidad: 'Por intervención remota',
-    tarifa: '$45.000',
+    tarifa: '$50.000',
     observaciones: 'Incluye diagnóstico y solución básica',
   },
   {
     servicio: 'Mantenimiento Preventivo Automatizado',
     modalidad: 'Mensual (por equipo)',
-    tarifa: '$25.000',
+    tarifa: '$30.000',
     observaciones: 'Scripts, limpieza digital, revisión remota',
   },
   {
